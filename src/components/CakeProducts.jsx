@@ -1,0 +1,76 @@
+import React from "react";
+import { FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import cheeseCake from "../assets/img/cakeProducts/cheeseCake.jpg";
+import chocolateCake from "../assets/img/cakeProducts/chocolateCake.jpg";
+import nastarCake from "../assets/img/cakeProducts/nastarCake.jpg";
+
+const CakeProducts = () => {
+  const products = [
+    {
+      title: "Kue Keju",
+      image: cheeseCake,
+      description: "Nikmati kelezatan kue keju kami yang lembut dan lezat.",
+      price: "Rp60.000 - Rp120.000",
+    },
+    {
+      title: "Kue Nastar",
+      image: nastarCake,
+      description:
+        "Rasakan keharuman dan kelezatan kue nastar tradisional kami.",
+      price: "Rp45.000 - Rp90.000",
+    },
+    {
+      title: "Kue Coklat",
+      image: chocolateCake,
+      description:
+        "Dilapis dengan cokelat premium, kue coklat kami menggoda selera Anda.",
+      price: "Rp55.000 - Rp110.000",
+    },
+  ];
+
+  return (
+    <div className="container mt-24 space-y-3 pb-12 lg:mt-32 lg:pb-20">
+      <h2 className="text-center text-primary lg:text-lg">// Produk Kue</h2>
+      <h1 className="mx-auto max-w-lg pb-5 text-center font-playfair text-2xl font-bold lg:text-4xl">
+        Temukan Berbagai Macam Penawaran Toko Kue Kami
+      </h1>
+
+      <div className="flex flex-col items-center justify-center gap-3 md:flex-row lg:gap-6">
+        {products.map((product, index) => (
+          <div key={index} className="group w-full overflow-hidden rounded">
+            {/* Header */}
+            <div className="relative z-20 space-y-2 bg-white p-3 text-center transition duration-500 group-hover:bg-primary group-hover:text-white lg:space-y-3 lg:p-5">
+              <p className="inline-block rounded-full border border-primary px-3 text-sm group-hover:border-white lg:text-base">
+                {product.price}
+              </p>
+              <h2 className="font-playfair text-2xl font-bold lg:text-3xl">
+                {product.title}
+              </h2>
+              <p className="text-sm lg:text-base">{product.description}</p>
+            </div>
+
+            {/* Body Image */}
+            <div className="relative">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="h-48 w-full rounded-b object-cover lg:h-60"
+              />
+              <div className="absolute left-0 top-0 flex h-full w-full -translate-y-full items-center justify-center bg-black bg-opacity-50 opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                <Link
+                  to={""}
+                  className="rounded-full border p-3 text-xl text-primary transition duration-500 hover:bg-white"
+                >
+                  <FaEye />
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CakeProducts;
