@@ -8,7 +8,7 @@ const HeroComponent = ({ image, title }) => {
         alt=""
         className="h-full w-full object-cover brightness-50"
       />
-      <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-playfair text-3xl font-bold text-white lg:text-5xl">
+      <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-nowrap font-playfair text-3xl font-bold text-white lg:text-5xl">
         {title}
       </h1>
     </div>
