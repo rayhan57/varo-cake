@@ -1,38 +1,12 @@
 import React from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import cheeseCake from "../assets/img/heroImage/cheeseCake.webp";
-import nastarCake from "../assets/img/heroImage/nastarCake.webp";
-import snowWhiteCake from "../assets/img/heroImage/snowWhiteCake.webp";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
-const HeroHomePage = () => {
-  const slides = [
-    {
-      title: "Kue Keju",
-      description:
-        "Rasakan kelezatan kue keju kami yang lembut dan gurih, dipersembahkan dengan cinta dan keterampilan.",
-      src: cheeseCake,
-      alt: "cheeseCake",
-    },
-    {
-      title: "Kue Nastar",
-      description:
-        "Nikmati cita rasa tradisional kue nastar kami, dengan kombinasi manis dan lezat yang membuat Anda ingin kembali lagi.",
-      src: nastarCake,
-      alt: "nastarCake",
-    },
-    {
-      title: "Kue Putri Salju",
-      description:
-        "Kue putri salju kami memberikan pengalaman lezat dengan lapisan gula halus yang mencair di mulut, menciptakan kenangan manis setiap kali menggigitnya.",
-      src: snowWhiteCake,
-      alt: "snowWhiteCake",
-    },
-  ];
-
+const HeroHomePage = ({ cakes }) => {
   return (
     <div className="relative h-[86vh] md:h-screen lg:h-[86vh]">
       <Swiper
@@ -42,22 +16,26 @@ const HeroHomePage = () => {
         modules={[Navigation]}
         className="mySwiper"
       >
-        {slides.map((slide, index) => (
+        {cakes.map((cake, index) => (
           <SwiperSlide key={index}>
             <img
-              src={slide.src}
-              alt={slide.alt}
+              src={`/src/assets/img/${cake.images[0]}`}
+              alt={cake.name}
               className="h-full w-full object-cover brightness-50"
             />
             <div className="absolute left-0 top-0 flex h-full w-full items-center ps-4 text-white lg:ps-20">
               <div className="max-w-2xl space-y-3 text-start lg:space-y-5">
                 <h1 className="font-playfair text-5xl font-bold lg:text-7xl">
-                  {slide.title}
+                  {cake.name}
                 </h1>
-                <p className="pb-2 lg:pb-5 lg:text-xl">{slide.description}</p>
-                <button className="rounded-full bg-primary px-6 py-3 font-semibold hover:bg-hover lg:px-8 lg:py-4 lg:text-lg">
+                <p className="line-clamp-2 lg:text-xl">{cake.description}</p>
+                <br />
+                <Link
+                  to={`/products/${cake.id}`}
+                  className="inline-block rounded-full bg-primary px-6 py-3 font-semibold hover:bg-hover lg:px-8 lg:py-4 lg:text-lg"
+                >
                   Baca selengkapnya
-                </button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

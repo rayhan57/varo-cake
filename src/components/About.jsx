@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
-import sample1 from "../assets/img/aboutImage/sample1.jpg";
-import sample2 from "../assets/img/aboutImage/sample2.jpg";
+import cheeseCake from "../assets/img/aboutImage/cheeseCake.webp";
+import nastarCake from "../assets/img/aboutImage/nastarCake.webp";
 import ImageDesign from "./ImageDesign";
 
 const PointsData = ({ label }) => {
@@ -18,7 +18,7 @@ const PointsData = ({ label }) => {
 const About = () => {
   return (
     <div className="mt-36 flex flex-col items-center justify-between gap-20 md:mt-24 md:flex-row lg:mt-32 lg:gap-8">
-      <ImageDesign image1={sample1} image2={sample2} />
+      <ImageDesign image1={cheeseCake} image2={nastarCake} />
 
       <div className="max-w-lg space-y-2 text-sm lg:space-y-4 lg:text-base">
         <p className="text-base text-primary lg:text-lg">// TENTANG KAMI</p>

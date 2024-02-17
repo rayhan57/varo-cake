@@ -2,8 +2,8 @@ import React from "react";
 import customizationOptions from "../assets/img/ourServices/customizationOptions.svg";
 import freshIngredients from "../assets/img/ourServices/freshIngredients.svg";
 import onlineOrder from "../assets/img/ourServices/onlineOrdering.svg";
-import sample1 from "../assets/img/ourServices/sample1.jpg";
-import sample2 from "../assets/img/ourServices/sample2.jpg";
+import cheeseStick from "../assets/img/ourServices/cheeseStick.webp";
+import cheeseSago from "../assets/img/ourServices/cheeseSago.webp";
 import flavorUnique from "../assets/img/ourServices/uniqueFlavors.svg";
 import ImageDesign from "./ImageDesign";
 
@@ -69,7 +69,7 @@ const OurServices = () => {
         </div>
       </div>
 
-      <ImageDesign image1={sample1} image2={sample2} />
+      <ImageDesign image1={cheeseStick} image2={cheeseSago} />
     </div>
   );
 };

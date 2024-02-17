@@ -37,7 +37,7 @@ const Footer = () => {
               title={"Jl. Rawa Indah, Pondok Gede, Bekasi"}
             />
             <AddressInfo icon={<FaPhoneAlt />} title={"+62 838 0650 6551"} />
-            <AddressInfo icon={<MdEmail />} title={"info@gmail.com"} />
+            <AddressInfo icon={<MdEmail />} title={"varocake@gmail.com"} />
           </div>
         </div>
       </div>

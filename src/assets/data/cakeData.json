@@ -1,0 +1,29 @@
+{
+  "cakes": [
+    {
+      "id": 1,
+      "name": "Kue Keju",
+      "price": "Rp.60.000 - Rp.120.000",
+      "description": "Nikmati kelezatan Kue Keju kami, kombinasi lembut dan gurih yang memukau. Setiap gigitan adalah pengalaman luar biasa, menyatukan kelembutan adonan dan kelezatan keju berkualitas tinggi. Kesempurnaan cita rasa dalam setiap sajian.",
+      "images": ["kue-keju-1.webp", "kue-keju-2.webp", "kue-keju-3.webp"]
+    },
+    {
+      "id": 2,
+      "name": "Kue Nastar",
+      "price": "Rp.45.000 - Rp.90.000",
+      "description": "Nikmati cita rasa tradisional kue nastar kami, dengan kombinasi manis dan lezat yang membuat Anda ingin kembali lagi.",
+      "images": ["kue-nastar-1.webp", "kue-nastar-2.webp", "kue-nastar-3.webp"]
+    },
+    {
+      "id": 3,
+      "name": "Kue Putri Salju",
+      "price": "Rp.50.000 - Rp.80.000",
+      "description": "Kue putri salju kami memberikan pengalaman lezat dengan lapisan gula halus yang mencair di mulut, menciptakan kenangan manis setiap kali menggigitnya.",
+      "images": [
+        "kue-putri-salju-1.webp",
+        "kue-putri-salju-2.webp",
+        "kue-putri-salju-3.webp"
+      ]
+    }
+  ]
+}
