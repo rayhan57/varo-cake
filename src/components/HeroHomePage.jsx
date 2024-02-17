@@ -19,7 +19,7 @@ const HeroHomePage = ({ cakes }) => {
         {cakes.map((cake, index) => (
           <SwiperSlide key={index}>
             <img
-              src={`/src/assets/img/${cake.images[0]}`}
+              src={`/assets/img/${cake.images[0]}`}
               alt={cake.name}
               className="h-full w-full object-cover brightness-50"
             />
