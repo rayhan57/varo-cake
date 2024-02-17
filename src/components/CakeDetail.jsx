@@ -14,7 +14,7 @@ const CakeDetail = ({ cake }) => {
       <div className="w-full">
         {/* Thumbnail */}
         <img
-          src={`/src/assets/img/${thumbnail}`}
+          src={`/img/${thumbnail}`}
           alt="thumbnail"
           className="h-48 w-full rounded object-cover md:object-fill lg:h-96"
         />
@@ -23,7 +23,7 @@ const CakeDetail = ({ cake }) => {
           {cake.images?.map((image, index) => (
             <img
               key={index}
-              src={`/src/assets/img/${image}`}
+              src={`/img/${image}`}
               alt={cake.name}
               className={`h-20 w-20 cursor-pointer rounded border ${image === thumbnail ? "border-4 border-primary" : ""} object-cover transition hover:brightness-75`}
               onClick={() => setThumbnail(image)}

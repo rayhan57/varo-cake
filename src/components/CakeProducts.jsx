@@ -32,7 +32,7 @@ const CakeProducts = () => {
             {/* Body Image */}
             <div className="relative">
               <img
-                src={`/src/assets/img/${cake.images[1]}`}
+                src={`/img/${cake.images[1]}`}
                 alt={cake.name}
                 className="h-48 w-full rounded-b object-cover lg:h-60"
               />
