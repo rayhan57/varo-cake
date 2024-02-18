@@ -8,7 +8,10 @@ import { Link } from "react-router-dom";
 
 const HeroHomePage = ({ cakes }) => {
   return (
-    <div className="relative h-[86vh] md:h-screen lg:h-[86vh]">
+    <div
+      data-aos="fade-down"
+      className="relative h-[86vh] md:h-screen lg:h-[86vh]"
+    >
       <Swiper
         navigation={true}
         speed={1500}

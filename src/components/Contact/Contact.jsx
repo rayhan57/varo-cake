@@ -52,7 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="mx-auto mt-24 max-w-screen-md space-y-2 text-center text-sm lg:mt-32 lg:space-y-3 lg:text-base">
+    <div
+      data-aos="fade-up"
+      className="mx-auto mt-24 max-w-screen-md space-y-2 text-center text-sm lg:mt-32 lg:space-y-3 lg:text-base"
+    >
       <h2 className="text-base text-primary lg:text-lg">// HUBUNGI KAMI</h2>
       <h1 className="pb-5 font-playfair text-xl font-bold capitalize lg:text-3xl">
         Kami siap menjawab pertanyaan Anda. Jangan ragu untuk menghubungi tim

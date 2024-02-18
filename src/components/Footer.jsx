@@ -14,7 +14,7 @@ const AddressInfo = ({ icon, title }) => {
 
 const Footer = () => {
   return (
-    <>
+    <div data-aos="fade-up">
       <div className="mt-24 bg-navbar text-white lg:mt-32">
         <div className="container flex flex-col items-center justify-around gap-6 p-8 md:flex-row lg:p-10">
           <div className="max-w-md flex-1">
@@ -53,7 +53,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

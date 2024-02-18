@@ -25,7 +25,10 @@ const SellingPoints = () => {
   ];
 
   return (
-    <div className="mt-24 flex flex-col items-center justify-evenly gap-2 md:flex-row lg:mt-32 lg:gap-4">
+    <div
+      data-aos="fade-up"
+      className="mt-24 flex flex-col items-center justify-evenly gap-2 md:flex-row lg:mt-32 lg:gap-4"
+    >
       {points.map((point, index) => (
         <div
           key={index}

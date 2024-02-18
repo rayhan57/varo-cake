@@ -17,7 +17,10 @@ const PointsData = ({ label }) => {
 
 const About = () => {
   return (
-    <div className="mt-36 flex flex-col items-center justify-between gap-20 md:mt-24 md:flex-row lg:mt-32 lg:gap-8">
+    <div
+      data-aos="fade-up"
+      className="mt-36 flex flex-col items-center justify-between gap-20 md:mt-24 md:flex-row lg:mt-32 lg:gap-8"
+    >
       <ImageDesign image1={cheeseCake} image2={nastarCake} />
 
       <div className="max-w-lg space-y-2 text-sm lg:space-y-4 lg:text-base">

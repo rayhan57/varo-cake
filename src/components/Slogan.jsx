@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const Slogan = () => {
   return (
-    <div className="container mt-24 lg:mt-32">
+    <div data-aos="fade-up" className="container mt-24 lg:mt-32">
       <div className="flex flex-col items-center justify-between gap-3 rounded-b bg-primary p-4 font-bold text-white md:flex-row lg:p-8">
         <h1 className="max-w-lg text-center font-playfair text-3xl md:text-start lg:text-5xl">
           Tingkatkan Pengalaman Berselera Anda di Toko Kue Kami

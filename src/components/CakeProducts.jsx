@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const CakeProducts = ({ cakes }) => {
   return (
-    <div className="container mt-24 space-y-3 pb-12 lg:mt-32 lg:pb-20">
+    <div
+      data-aos="fade-up"
+      className="container mt-24 space-y-3 pb-12 lg:mt-32 lg:pb-20"
+    >
       <h2 className="text-center text-primary lg:text-lg">// Produk Kue</h2>
       <h1 className="mx-auto max-w-lg pb-5 text-center font-playfair text-2xl font-bold lg:text-4xl">
         Temukan Berbagai Macam Penawaran Toko Kue Kami
