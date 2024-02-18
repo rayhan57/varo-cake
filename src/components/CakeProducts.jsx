@@ -1,11 +1,7 @@
 import React from "react";
-import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import cakeData from "../assets/data/cakeData.json";
 
-const CakeProducts = () => {
-  const cakes = cakeData.cakes;
-
+const CakeProducts = ({ cakes }) => {
   return (
     <div className="container mt-24 space-y-3 pb-12 lg:mt-32 lg:pb-20">
       <h2 className="text-center text-primary lg:text-lg">// Produk Kue</h2>
@@ -13,9 +9,9 @@ const CakeProducts = () => {
         Temukan Berbagai Macam Penawaran Toko Kue Kami
       </h1>
 
-      <div className="flex flex-col items-center justify-center gap-3 md:flex-row lg:gap-6">
+      <div className="grid gap-3 md:grid-cols-3 lg:gap-6">
         {cakes.map((cake, index) => (
-          <div key={index} className="group w-full overflow-hidden rounded">
+          <div key={index} className="group overflow-hidden rounded">
             {/* Header */}
             <div className="relative z-20 space-y-2 bg-white p-3 text-center transition duration-500 group-hover:bg-primary group-hover:text-white lg:space-y-3 lg:p-5">
               <p className="inline-block rounded-full border border-primary px-3 text-sm group-hover:border-white lg:text-base">
@@ -39,9 +35,9 @@ const CakeProducts = () => {
               <div className="absolute left-0 top-0 flex h-full w-full -translate-y-full items-center justify-center bg-black bg-opacity-50 opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                 <Link
                   to={`/products/${cake.id}`}
-                  className="rounded-full border p-3 text-xl text-primary transition duration-500 hover:bg-white"
+                  className="rounded-full border p-3 text-sm text-primary transition duration-500 hover:bg-white lg:text-base"
                 >
-                  <FaEye />
+                  Baca selengkapnya
                 </Link>
               </div>
             </div>

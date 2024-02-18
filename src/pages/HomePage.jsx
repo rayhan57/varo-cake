@@ -11,7 +11,7 @@ import SellingPoints from "../components/SellingPoints";
 import Slogan from "../components/Slogan";
 
 const HomePage = () => {
-  const cakes = cakeData.cakes;
+  const cakes = cakeData.cakes.slice(0, 3);
 
   return (
     <>
@@ -23,7 +23,7 @@ const HomePage = () => {
       </div>
       <div className="bg-primary bg-opacity-20">
         <Slogan />
-        <CakeProducts />
+        <CakeProducts cakes={cakes} />
       </div>
       <div className="container">
         <OurServices />

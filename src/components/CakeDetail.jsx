@@ -34,7 +34,9 @@ const CakeDetail = ({ cake }) => {
 
       <div className="w-full">
         <h1 className="text-2xl font-semibold lg:text-3xl">{cake.name}</h1>
-        <p className=" text-sm text-gray-400 lg:text-base">Tersedia 2 varian</p>
+        <p className=" text-sm text-gray-400 lg:text-base">
+          Tersedia {cake.variant} varian
+        </p>
         <p className="py-2 font-semibold text-primary lg:text-lg">
           {cake.price}
         </p>
