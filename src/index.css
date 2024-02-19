@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --toastify-color-success: #eaa636;
+}
+
 .swiper {
   width: 100%;
   height: 100%;

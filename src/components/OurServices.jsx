@@ -25,11 +25,12 @@ const PointsOffer = ({ title, icon, description }) => {
 
 const OurServices = () => {
   return (
-    <div
-      data-aos="fade-up"
-      className="mt-24 flex flex-col items-center gap-20 md:flex-row md:gap-10 lg:mt-32"
-    >
-      <div className="max-w-lg space-y-2 text-sm lg:space-y-4 lg:text-base">
+    <div className="mt-24 flex flex-col items-center gap-20 md:flex-row md:gap-10 lg:mt-32">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="500"
+        className="max-w-lg space-y-2 text-sm lg:space-y-4 lg:text-base"
+      >
         <p className="text-base text-primary lg:text-lg">// Layanan Kami</p>
         <h1 className="font-playfair text-2xl font-bold lg:text-4xl">
           Apa yang Kami Tawarkan Untuk Anda?

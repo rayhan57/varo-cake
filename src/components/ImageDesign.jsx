@@ -2,7 +2,10 @@ import React from "react";
 
 const ImageDesign = ({ image1, image2 }) => {
   return (
-    <div className="relative flex w-full items-center justify-center">
+    <div
+      data-aos="fade-up"
+      className="relative flex w-full items-center justify-center"
+    >
       {/* Create a colored background */}
       <div className="flex h-28 w-64 items-center justify-center rounded bg-primary bg-opacity-20 md:h-60 lg:h-96 lg:w-80">
         {/* Create a smaller colored box */}

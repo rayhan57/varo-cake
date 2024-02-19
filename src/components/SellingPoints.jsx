@@ -25,12 +25,11 @@ const SellingPoints = () => {
   ];
 
   return (
-    <div
-      data-aos="fade-up"
-      className="mt-24 flex flex-col items-center justify-evenly gap-2 md:flex-row lg:mt-32 lg:gap-4"
-    >
+    <div className="mt-24 flex flex-col items-center justify-evenly gap-2 md:flex-row lg:mt-32 lg:gap-4">
       {points.map((point, index) => (
         <div
+          data-aos="fade-up"
+          data-aos-delay={index * 200}
           key={index}
           className="flex w-full flex-col items-center justify-center gap-3 text-nowrap rounded bg-primary p-6 text-white transition duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-hover hover:drop-shadow-xl lg:gap-6 lg:p-12 lg:text-lg"
         >

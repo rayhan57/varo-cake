@@ -2,7 +2,10 @@ import React from "react";
 
 const HeroComponent = ({ image, title }) => {
   return (
-    <div className="relative h-[40vh] md:h-[50vh] lg:h-[40vh]">
+    <div
+      data-aos="fade-down"
+      className="relative h-[40vh] md:h-[50vh] lg:h-[40vh]"
+    >
       <img
         src={image}
         alt=""

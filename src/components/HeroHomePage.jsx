@@ -10,6 +10,7 @@ const HeroHomePage = ({ cakes }) => {
   return (
     <div
       data-aos="fade-down"
+      data-aos-duration="1000"
       className="relative h-[86vh] md:h-screen lg:h-[86vh]"
     >
       <Swiper

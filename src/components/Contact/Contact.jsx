@@ -35,7 +35,7 @@ const Contact = () => {
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
-        pauseOnHover: true,
+        pauseOnHover: false,
         draggable: true,
         progress: undefined,
         theme: "light",
@@ -94,7 +94,7 @@ const Contact = () => {
           textArea
         />
         <button
-          className="rounded-full bg-primary px-6 py-3 font-semibold text-white hover:bg-hover disabled:cursor-not-allowed disabled:bg-yellow-400 lg:px-8 lg:py-4"
+          className="rounded-full bg-primary px-6 py-3 font-semibold text-white hover:bg-hover disabled:cursor-not-allowed disabled:bg-orange-300 lg:px-8 lg:py-4"
           disabled={isSubmitting}
         >
           Kirim Pesan
@@ -108,9 +108,9 @@ const Contact = () => {
         newestOnTop={false}
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
+        pauseOnFocusLoss={false}
         draggable
-        pauseOnHover
+        pauseOnHover={false}
         theme="light"
         transition={Slide}
       />
