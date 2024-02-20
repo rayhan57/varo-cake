@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FloatingInput from "./FloatingInput";
 import { Slide, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { submitForm } from "../../libs/fetchingApi";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -11,7 +12,6 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-  const scriptUrl = import.meta.env.VITE_SCRIPT_URL;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -22,33 +22,34 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const response = await fetch(
-      `${scriptUrl}?name=${formData.name}&email=${formData.email}&subject=${formData.subject}&message=${formData.message}`,
-      {
-        method: "POST",
-      },
-    );
-
-    if (response.ok) {
-      toast.success("Terima kasih sudah menghubungi kami", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Slide,
-      });
+    await submitForm(formData, () => {
+      handleSuccess();
       setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }
+      resetForm();
+    });
+  };
+
+  const handleSuccess = () => {
+    toast.success("Terima kasih sudah menghubungi kami", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Slide,
+    });
+  };
+
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
 
   return (
