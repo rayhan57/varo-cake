@@ -5,6 +5,7 @@ import heroImage from "../assets/img/heroImage/hero-image.webp";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact/Contact";
 import ScrollToTop from "../components/ScrollToTop";
+import MapLocation from "../components/Contact/MapLocation";
 
 const ContactPage = () => {
   return (
@@ -14,6 +15,7 @@ const ContactPage = () => {
       <div className="container py-8 lg:py-10">
         <Contact />
       </div>
+      <MapLocation />
       <Footer />
       <ScrollToTop />
     </>
